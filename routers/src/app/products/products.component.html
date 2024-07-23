@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngFor="let item of products">
+        <img src="{{item.imgUrl}}" width="200px" height="200px"/>
+        <h3>{{item.name}}</h3>
+        <p>{{item.price}}</p>
+        <button routerLink="/product/{{item.id}}">show details</button>
+    </div>
+</div>

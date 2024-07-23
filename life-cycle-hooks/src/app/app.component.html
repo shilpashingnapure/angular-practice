@@ -1,0 +1,7 @@
+<h1>Life Cycle Hooks</h1>
+<input type="text" #myValue/>
+<button (click)="getInput(myValue)">click me</button>
+<button (click)="check=false">delete componet</button>
+<app-demo [value]="name" *ngIf="check">
+  <h1 #heading>this is ng Content value {{ Inputvalue }}</h1>
+</app-demo>

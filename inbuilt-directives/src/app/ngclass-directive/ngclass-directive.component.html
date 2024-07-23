@@ -1,0 +1,9 @@
+<h1>ngclass-directive !</h1>
+<button (click)="layoutVertical = !layoutVertical">{{layoutVertical ? 'horizontal layout' : 'vertical layout' }}</button>
+<div class="container" [ngClass]="{vertical : layoutVertical}">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>

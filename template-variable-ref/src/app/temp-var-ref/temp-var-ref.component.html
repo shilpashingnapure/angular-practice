@@ -1,0 +1,11 @@
+<!-- referance variable refers to element -->
+<h1>template variable referance</h1>
+<input type="text" #myValue (input)="'0'"/>
+
+<!-- for show this input value on view we have to trigger event 
+  so here used input event 
+  myvalue is referce of input element 
+-->
+<h1>
+  {{myValue.value}}
+</h1>

@@ -1,0 +1,14 @@
+<!-- two way data binding  
+  will help us to do live data showing on web !!  
+  ngmodel will work on form elements -->
+
+
+<!-- without using two way data binding -->
+
+<input type="text" [value]="withoutbinding" (input)="withoutbinding = $event.target.value"/>
+<h1> with out using two way data binding {{withoutbinding}}</h1>
+
+<!-- with using two way data binding -->
+<input type="text" [(ngModel)]="value"/>
+<h1> with using two way data binding {{value}}</h1>
+

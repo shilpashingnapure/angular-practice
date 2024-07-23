@@ -1,0 +1,6 @@
+<input type="text" #mytext/>
+<button (click)="handleColor(mytext.value)">click me</button>
+
+<!-- here we bind with directive selector because for input variable also we give the same name -->
+<h1 [appBindingDirective]="color" >this is the h1 tag</h1>
+

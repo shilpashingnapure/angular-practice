@@ -1,0 +1,18 @@
+<h1>ngIf-directive </h1>
+
+<button (click)="handleNotice()">show notice</button>
+
+<!-- ngif -->
+<div *ngIf="isopen" class="highlight">
+    <p>this is ngif directive</p>
+</div>
+
+
+<!-- ngif and else -->
+<div *ngIf="isopen ; else msg" class="highlight"> 
+    <p>hello this is second ngif directive with else</p>
+</div>
+
+<ng-template #msg>
+    <p>msg is here in else block!!</p>
+</ng-template>

@@ -1,0 +1,30 @@
+<form [formGroup]="reactiveForm"  (ngSubmit)="handleForm()">
+  <div class="form-control" [ngClass]="{ 'error-css' : emailError || (reactiveForm.get('username').value && reactiveForm.get('username').invalid) }">
+    <label>Username</label>
+    <div class="input-control">
+      <input type="text" placeholder="enter the usernmae" formControlName="username"/> 
+      <span *ngIf="reactiveForm.get('username').value != '' && reactiveForm.get('username').dirty" (click)="handleText('username')">x</span>
+    </div>
+    <div class="border-bottom"></div> 
+
+    <div class="error-msg">
+      <small>{{emailValidation || emailError}}</small>
+    </div>
+  </div>
+  <div class="form-control" [ngClass]="{'error-css' : passwordError != ''}">
+    <label>Password</label>
+    <div class="input-control">
+      <input type="text" placeholder="enter the password" formControlName="password"/> 
+      <span *ngIf="reactiveForm.get('password').value != '' && reactiveForm.get('password').dirty" (click)="handleText('password')">x</span>
+    </div>
+    <div class="border-bottom"></div>  
+    
+    <div class="error-msg">
+      <small>{{passwordError}}</small>
+    </div>
+  </div>
+  <input type="submit"  class="login-btn"
+  value="{{ loading ? loading : 'Login with email' }}"
+  [disabled]="!reactiveForm.valid"
+  [ngClass]="{ 'disbled-btn': !reactiveForm.valid }" value="submit"/>
+</form>

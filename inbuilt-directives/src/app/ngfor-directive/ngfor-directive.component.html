@@ -1,0 +1,8 @@
+<h1>ngFor directive</h1>
+<div class="container">
+    <div *ngFor="let product of products" >
+        <img [src]="product.imgUrl" width="80%" height="60%"/>
+        <h4>{{product.name}}</h4>
+        <span>{{product.price}}</span>
+    </div>
+</div>

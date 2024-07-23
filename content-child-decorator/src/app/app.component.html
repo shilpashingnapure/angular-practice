@@ -1,0 +1,13 @@
+
+<h1>Content Child Decorator !!</h1>
+
+<p> want to catch this h1 element in child component <br/>
+but because we add h1 element in parent component <br/>
+  so for catching element we have to use @contentChild() decorator to access element 
+  from child component !! </p>
+<app-demo>
+  <h1 #heading>This is left side</h1>
+</app-demo>
+<app-demo>
+  <h1 #heading>This is right side</h1>
+</app-demo>
